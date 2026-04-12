@@ -71,10 +71,17 @@ section p {
 .card-image {
   width: 100%;
   aspect-ratio: 343 / 240;
-  background: #ddd;
   border-radius: 16px;
   margin-bottom: 12px;
+  overflow: hidden;
   transition: opacity 0.2s ease;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .card h2 {
@@ -132,10 +139,15 @@ section p {
 
 .article-image {
   width: 100%;
-  height: 200px;
-  background: #ddd;
   border-radius: 16px;
   margin-bottom: 32px;
+  overflow: hidden;
+}
+
+.article-image img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .article-content p {
@@ -307,4 +319,3 @@ section p {
     line-height: 1.5;
   }
 }
-
