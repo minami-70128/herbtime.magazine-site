@@ -1,0 +1,308 @@
+body {
+  font-family: "Hiragino Sans", sans-serif;
+  margin: 0;
+  padding: 80px 0 0;
+  line-height: 1.8;
+  background: #fafafa;
+  color: #222;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fafafa;
+  border-bottom: 1px solid #e5e5e5;
+  z-index: 1000;
+}
+
+.header-inner {
+  width: min(1184px, calc(100% - 100px));
+  margin: 0 auto;
+  padding: 16px 0;
+}
+
+.logo {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+section {
+  width: min(1184px, calc(100% - 100px));
+  margin: 32px auto 40px;
+}
+
+section h1 {
+  font-size: 48px;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+section p {
+  font-size: 14px;
+  color: #666;
+}
+
+h1 {
+  margin-bottom: 8px;
+}
+
+.article-content p {
+  font-size: 16px;
+}
+
+/* ===== 記事一覧（3列） ===== */
+.articles {
+  width: min(1184px, calc(100% - 100px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 48px;
+}
+
+/* ===== カード全体 ===== */
+
+/* ===== 画像（ダミー） ===== */
+.card-image {
+  width: 100%;
+  aspect-ratio: 343 / 240;
+  background: #ddd;
+  border-radius: 16px;
+  margin-bottom: 12px;
+  transition: opacity 0.2s ease;
+}
+
+/* ===== タイトル ===== */
+.card h2 {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  transition: color 0.2s ease;
+}
+
+/* ===== タグ ===== */
+.tag {
+  display: inline-block;
+  background: #eee;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: #888;
+}
+
+.tags {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+
+@media (min-width: 1400px) {
+  section,
+  .articles {
+    width: min(1400px, calc(100% - 100px));
+  }
+}
+
+@media (max-width: 1200px) {
+  section,
+  .articles,
+  .header-inner {
+    width: calc(100% - 96px);
+  }
+
+  .articles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  section,
+  .articles,
+  .header-inner {
+    width: calc(100% - 40px);
+  }
+
+  .articles {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  section h1 {
+    font-size: 32px;
+  }
+
+  section p {
+    font-size: 13px;
+  }
+}
+
+.card h2 {
+  font-size: 18px;
+}
+
+@media (max-width: 1200px) {
+  .card h2 {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 767px) {
+  .card h2 {
+    font-size: 17px;
+  }
+}
+
+/* ===== 記事ページ ===== */
+.article-detail {
+  margin-top: 48px;
+}
+
+.article-inner {
+  width: min(660px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.article-title {
+  margin: 0;
+  margin-bottom: 4px;
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 24px;
+}
+
+.date {
+  color: #aaa;
+  white-space: nowrap;
+}
+
+.article-image {
+  width: 100%;
+  height: 200px;
+  background: #ddd;
+  border-radius: 16px;
+  margin-bottom: 32px;
+}
+
+.article-content p {
+  margin-bottom: 20px;
+  line-height: 1.9;
+}
+
+.card {
+  background: transparent;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-image {
+  transition: opacity 0.2s ease;
+}
+
+.card:hover .card-image {
+  opacity: 0.7;
+}
+
+.card h2 {
+  transition: color 0.2s ease;
+}
+
+.card:hover h2 {
+  color: #888;
+}
+
+.back-link:hover {
+  color: #222;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  margin: 0;
+  margin-bottom: 4px;
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+}
+
+.back-link:hover {
+  color: #222;
+}
+
+.material-symbols-outlined {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+/* ===== 小見出し ===== */
+
+.subheading-main {
+  font-size: 28px; 
+  line-height: 1.5;
+  margin: 32px 0 12px;
+  font-weight: 600;
+}
+
+.subheading-question {
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 24px 0 8px;
+  font-weight: 600;
+  color: #222; 
+}
+
+/* ===== フッター ===== */
+
+.site-footer {
+  margin-top: 80px;
+  padding: 40px 0;
+  background: #F0F0F0;
+}
+
+.footer-inner {
+  width: min(1184px, calc(100% - 100px));
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  justify-content: center;
+}
+
+.footer-links a {
+  font-size: 13px;
+  color: #666;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #222;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: #aaa;
+}
+
