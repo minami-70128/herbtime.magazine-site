@@ -1,3 +1,4 @@
+/* ===== 全体共通 ===== */
 body {
   font-family: "Hiragino Sans", sans-serif;
   margin: 0;
@@ -7,6 +8,11 @@ body {
   color: #222;
 }
 
+h1 {
+  margin-bottom: 8px;
+}
+
+/* ===== ヘッダー ===== */
 .site-header {
   position: fixed;
   top: 0;
@@ -20,7 +26,7 @@ body {
 .header-inner {
   width: min(1184px, calc(100% - 100px));
   margin: 0 auto;
-  padding: 16px 0;
+  padding: 10px 0;
 }
 
 .logo {
@@ -29,9 +35,10 @@ body {
   letter-spacing: 1px;
 }
 
+/* ===== 一覧ページ：ヒーロー ===== */
 section {
   width: min(1184px, calc(100% - 100px));
-  margin: 32px auto 40px;
+  margin: 16px auto 40px;
 }
 
 section h1 {
@@ -45,15 +52,7 @@ section p {
   color: #666;
 }
 
-h1 {
-  margin-bottom: 8px;
-}
-
-.article-content p {
-  font-size: 16px;
-}
-
-/* ===== 記事一覧（3列） ===== */
+/* ===== 一覧ページ：記事一覧 ===== */
 .articles {
   width: min(1184px, calc(100% - 100px));
   margin: 0 auto;
@@ -62,9 +61,13 @@ h1 {
   gap: 48px;
 }
 
-/* ===== カード全体 ===== */
+.card {
+  background: transparent;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
 
-/* ===== 画像（ダミー） ===== */
 .card-image {
   width: 100%;
   aspect-ratio: 343 / 240;
@@ -74,22 +77,11 @@ h1 {
   transition: opacity 0.2s ease;
 }
 
-/* ===== タイトル ===== */
 .card h2 {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 12px;
   transition: color 0.2s ease;
-}
-
-/* ===== タグ ===== */
-.tag {
-  display: inline-block;
-  background: #eee;
-  padding: 7px 12px;
-  border-radius: 999px;
-  font-size: 12px;
-  color: #888;
 }
 
 .tags {
@@ -98,67 +90,18 @@ h1 {
   flex-wrap: wrap;
 }
 
-
-@media (min-width: 1400px) {
-  section,
-  .articles {
-    width: min(1400px, calc(100% - 100px));
-  }
-}
-
-@media (max-width: 1200px) {
-  section,
-  .articles,
-  .header-inner {
-    width: calc(100% - 96px);
-  }
-
-  .articles {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-  }
-}
-
-@media (max-width: 767px) {
-  section,
-  .articles,
-  .header-inner {
-    width: calc(100% - 40px);
-  }
-
-  .articles {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  section h1 {
-    font-size: 32px;
-  }
-
-  section p {
-    font-size: 13px;
-  }
-}
-
-.card h2 {
-  font-size: 18px;
-}
-
-@media (max-width: 1200px) {
-  .card h2 {
-    font-size: 19px;
-  }
-}
-
-@media (max-width: 767px) {
-  .card h2 {
-    font-size: 17px;
-  }
+.tag {
+  display: inline-block;
+  background: #eee;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: #222;
 }
 
 /* ===== 記事ページ ===== */
 .article-detail {
-  margin-top: 48px;
+  margin-top: 16px;
 }
 
 .article-inner {
@@ -196,50 +139,19 @@ h1 {
 }
 
 .article-content p {
+  font-size: 16px;
   margin-bottom: 20px;
   line-height: 1.9;
-}
-
-.card {
-  background: transparent;
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
-
-.card-image {
-  transition: opacity 0.2s ease;
-}
-
-.card:hover .card-image {
-  opacity: 0.7;
-}
-
-.card h2 {
-  transition: color 0.2s ease;
-}
-
-.card:hover h2 {
-  color: #888;
-}
-
-.back-link:hover {
-  color: #222;
 }
 
 .back-link {
   display: inline-flex;
   align-items: center;
   gap: 2px;
-  margin: 0;
-  margin-bottom: 4px;
+  margin: 0 0 4px;
   text-decoration: none;
   color: #666;
   font-size: 14px;
-}
-
-.back-link:hover {
-  color: #222;
 }
 
 .material-symbols-outlined {
@@ -247,10 +159,9 @@ h1 {
   vertical-align: middle;
 }
 
-/* ===== 小見出し ===== */
-
+/* ===== 記事ページ：小見出し ===== */
 .subheading-main {
-  font-size: 28px; 
+  font-size: 28px;
   line-height: 1.5;
   margin: 32px 0 12px;
   font-weight: 600;
@@ -261,15 +172,14 @@ h1 {
   line-height: 1.6;
   margin: 24px 0 8px;
   font-weight: 600;
-  color: #222; 
+  color: #222;
 }
 
 /* ===== フッター ===== */
-
 .site-footer {
   margin-top: 80px;
   padding: 40px 0;
-  background: #F0F0F0;
+  background: #f0f0f0;
 }
 
 .footer-inner {
@@ -286,9 +196,9 @@ h1 {
 
 .footer-links {
   display: flex;
+  justify-content: center;
   gap: 16px;
   margin-bottom: 16px;
-  justify-content: center;
 }
 
 .footer-links a {
@@ -297,12 +207,104 @@ h1 {
   text-decoration: none;
 }
 
+.footer-copy {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* ===== hover ===== */
+.card:hover .card-image {
+  opacity: 0.7;
+}
+
+.card:hover h2 {
+  color: #888;
+}
+
+.back-link:hover {
+  color: #222;
+}
+
 .footer-links a:hover {
   color: #222;
 }
 
-.footer-copy {
-  font-size: 12px;
-  color: #aaa;
+/* ===== レスポンシブ：大画面 ===== */
+@media (min-width: 1400px) {
+  section,
+  .articles {
+    width: min(1400px, calc(100% - 100px));
+  }
+}
+
+/* ===== レスポンシブ：タブレット ===== */
+@media (max-width: 1200px) {
+  section,
+  .articles,
+  .header-inner {
+    width: calc(100% - 96px);
+  }
+
+  .articles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .card h2 {
+    font-size: 19px;
+  }
+}
+
+/* ===== レスポンシブ：モバイル ===== */
+@media (max-width: 767px) {
+  section,
+  .articles,
+  .header-inner {
+    width: calc(100% - 40px);
+  }
+
+  .header-inner {
+    padding: 8px 0;
+  }
+
+  .articles {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  section {
+    margin: 8px auto 32px;
+  }
+
+  section h1 {
+    font-size: 32px;
+  }
+
+  section p {
+    font-size: 13px;
+  }
+
+  .card h2 {
+    font-size: 17px;
+  }
+
+  .article-detail {
+    margin-top: 8px;
+  }
+
+  .article-title {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .subheading-main {
+    font-size: 22px;
+    line-height: 1.5;
+  }
+
+  .subheading-question {
+    font-size: 18px;
+    line-height: 1.5;
+  }
 }
 
