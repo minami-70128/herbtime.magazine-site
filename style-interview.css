@@ -1,0 +1,47 @@
+/* ===== インタビュー用だけ上書き ===== */
+
+.interview-item {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  column-gap: 8px;
+  align-items: start;
+  margin-top: 32px;
+}
+
+.interview-icon {
+  height: 30.4px; /* 16px × line-height 1.9 */
+  display: flex;
+  align-items: center;
+}
+
+.interview-icon img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.interview-body .subheading-question {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.9;
+  margin: 0;
+}
+
+.interview-body p {
+  font-size: 16px;
+  line-height: 1.9;
+  margin: 0;
+}
+
+.interview-body p + p {
+  margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+  .interview-icon {
+    height: auto;
+    display: block;
+  }
+}
