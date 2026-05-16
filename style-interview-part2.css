@@ -1,0 +1,124 @@
+/* ===== インタビュー形式 part2 ===== */
+
+.interview-line {
+  font-size: 16px;
+  line-height: 1.9;
+  margin: 28px 0 0;
+}
+
+.interview-line p {
+  margin: 0 0 20px;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.interview-line p:last-child {
+  margin-bottom: 0;
+}
+
+.speaker {
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+.speaker-mana {
+  color: #3C6E71;
+}
+
+.speaker-sawa {
+  color: #DA6C70;
+}
+
+/* ===== セクション見出し ===== */
+
+.section-heading {
+  margin-top: 72px;
+  scroll-margin-top: 100px;
+}
+
+.section-heading .section-label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #9a9a9a;
+  margin: 0 0 10px;
+  line-height: 1.2;
+}
+
+.section-heading .section-title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0 0 12px;
+  color: #222;
+}
+
+/* ===== プロフィール枠 ===== */
+
+.intro-profile + .intro-profile {
+  margin-top: -12px;
+}
+
+/* ===== ページネーション ===== */
+
+.article-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 64px;
+}
+
+.pagination-button {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
+
+  background: #fff;
+  color: #222;
+
+  text-decoration: none;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+.pagination-button.is-active {
+  background: #222;
+  color: #fff;
+  border-color: #222;
+}
+
+.pagination-button.is-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.pagination-arrow .material-symbols-outlined {
+  font-size: 28px;
+}
+
+@media (max-width: 767px) {
+  .section-heading {
+    margin-top: 56px;
+  }
+
+  .section-heading .section-label {
+    font-size: 16px;
+    margin: 0 0 4px;
+    line-height: 1.2;
+  }
+
+  .section-heading .section-title {
+    font-size: 22px;
+    line-height: 1.5;
+    margin: 0 0 12px;
+  }
+}
