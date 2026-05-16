@@ -310,6 +310,7 @@ section p {
   color: #222;
 }
 
+
 /* ===== レスポンシブ：大画面 ===== */
 @media (min-width: 1400px) {
   section,
