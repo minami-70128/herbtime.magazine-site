@@ -191,6 +191,18 @@ section p {
   font-size: 14px;
 }
 
+.back-link .material-symbols-outlined {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 20px;
+  line-height: 1;
+}
+
 .material-symbols-outlined {
   font-size: 20px;
   vertical-align: middle;
